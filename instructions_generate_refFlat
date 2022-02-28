@@ -1,0 +1,15 @@
+
+#Instructions to generate a refFLAT files from GTF , to work with CollecttRnaSeqMetrics 
+GTF to refFlat
+Convert gene annotations from GTF to genePred refFlat format:
+
+gtfToGenePred -genePredExt -geneNameAsName2 genes.gtf refFlat.tmp.txt
+paste <(cut -f 12 refFlat.tmp.txt) <(cut -f 1-10 refFlat.tmp.txt) > refFlat.txt
+rm refFlat.tmp.txt
+gzip refFlat.txt
+Tested with Ensembl GTF file and used for Picard CollectRnaSeqMetrics (must be gzipped).
+gtfToGenePred obtained from http://hgdownload.cse.ucsc.edu/admin/exe/
+
+instructions from here : https://github.com/igordot/genomics/blob/master/notes/converting-files.md 
+
+to run gtfToGenePred give executable permission by chmod 775 ./gtfToGenePred

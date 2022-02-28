@@ -1,0 +1,18 @@
+# Pipeline options in YAML format
+
+hisat2:
+    threads: 4
+    memory_per_thread: 5G
+    genome: genome/release_91/Mus_musculus.GRCm38.v91
+    options: # --rna-strandness unstranded, specify strand specifiic information for single end : F or R, for paired - F or RF, default: unstranded
+
+picard:
+    genome: genome/release_91/Mus_musculus.GRCm38.dna.primary_assembly.fa
+    refflat: genome/release_91/Mus_musculus.GRCm38.91.refFlat.txt.gz
+    strand_spec: NONE
+    stringency: SILENT
+
+feature_counts:
+    gtf: genome/release_91/Mus_musculus.GRCm38.91.gtf.gz
+    options: -s 0
+    threads: 4
