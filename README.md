@@ -5,7 +5,7 @@ Modified to run single-end RNA-seq library format and has an additional tas to r
 
 originally written by
 
-- Kevin Rue-Albrecht (@kevinrue) to work on single end fastq files
+- Kevin Rue-Albrecht (@kevinrue) to work on paired-end fastq files
 
 modified by
-- Devika Agarwal (@deevdevil)
+- Devika Agarwal (@deevdevil) to work on unpaired fastqs and also run Picard::CollectRnaSeqMetrics
